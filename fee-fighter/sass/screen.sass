@@ -1,0 +1,611 @@
+@import "compass/reset"
+@import "compass/css3"
+@import "omg-text"
+@import "ceaser-easing"
+@import "animations"
+
+$back-gray: #242424
+$skin-color: hsla(30, 60, 75, 1) 
+
+@mixin meta-serif
+	font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2",serif
+	
+@mixin quatro
+	font-family: "quatro-1","quatro-2","Arial Black",sans-serif
+	
+@mixin museo
+	font-family: "museo-sans-1","museo-sans-2",sans-serif
+
+body
+	background: $back-gray
+	font-size: 100%
+	
+nav
+	width: 100%
+	height: 60px
+	position: absolute
+	z-index: 200
+	top: -60px
+	+background(linear-gradient(hsla(0,0,12,1), hsla(0,0,8,1)))
+	+museo
+	ul
+		width: 960px
+		margin: auto
+		overflow: hidden
+
+	li
+		float: left
+		width: 33%
+		&.current button
+			background-color: $back-gray
+		
+
+	button
+		cursor: pointer
+		text-transform: uppercase
+		height: 60px
+		width: 100%
+		text-align: center
+		margin: 0
+		border: 0
+		color: #eee
+		background: transparent
+		&:hover
+			background-color: hsla(0,0,3,1)
+		
+		
+
+	
+	
+#wrapper
+	width: 960px
+	height: 650px
+	margin: 20px auto
+	position: relative
+	overflow: hidden
+	border-bottom: solid 1px lighten($back-gray, 5%)
+	+background( radial-gradient(50% 100%,lighten($back-gray, 5%), $back-gray 400px))
+	z-index: 100
+	
+.slider
+	width: 3000px
+	position: absolute
+	+ceaser(ease, left, 400ms)
+	
+#intro
+	color: #ddd
+	text-align: center
+	position: relative
+	z-index: 100
+	display: none
+	+meta-serif
+
+	h1
+		font-size: 120px
+		position: absolute
+		top: 125px
+		font-weight: 700
+		width: 100%
+		opacity: 0
+		
+		+meta-serif
+	p
+		position: absolute
+		top: 80px
+		font-size: 69px
+		width: 100%
+		top: 164px
+		opacity: 0
+		
+		
+		
+	h2
+		font-size: 136px
+		position: absolute
+		top: 80px	
+		left: 0	
+		width: 100%
+		opacity: 0
+		+quatro
+	
+
+#me
+	width: 90px
+	height: 218px
+	position: absolute
+	bottom: 0
+	left: 43%
+	z-index: 200
+	display: none
+	
+
+	
+.head
+	width: image-width('body/head.png')
+	height: image-height('body/head.png')
+	background: image-url('body/head.png') no-repeat
+	position: relative
+	top: 3px
+	z-index: 100
+
+	
+
+.upper-body
+	position: relative
+	width: 90px
+	height: 60px
+	margin: 0 auto
+	
+.chest
+	position: absolute
+	width: 35px
+	height: 60px
+	left: 1.85em
+	+border-radius(.5em .5em 0 0)
+	background: darken($back-gray, 8%)
+	
+.shoulder
+	position: absolute
+	top: 0px
+	width: (image-width('body/shoulders.png')/2)
+	height: image-width('body/shoulders.png')
+	background: image-url('body/shoulders.png') no-repeat
+	
+#left-shoulder
+	left: 0px
+	
+	
+#right-shoulder
+	right: 0
+	background-position: -(image-width('body/shoulders.png')/2) 0
+	
+.arm
+	position: absolute
+	.humerus
+		position: relative
+		height: 25px
+		width: 7px
+		background: $skin-color
+		+transform-origin(20%, 20%)
+		@include border-radius(2em)
+	.radius
+		+transform-origin(center, top)
+		position: relative
+		height: 15px
+		width: 7px
+		top: 1px
+		background: $skin-color
+		@include border-radius(2em)
+		
+#left-arm
+	top: 0px
+	left: 9px
+	
+	ol
+		position: absolute
+		left: 0px
+		top: 20px
+	.humerus
+		+rotate(20deg)
+		margin: -5px 5px
+	.radius
+		left: -2px
+	.hand
+		:left -2px
+
+		
+#right-arm
+	top: 0px
+	right: 8px
+	
+	ol
+		position: absolute
+		left: 0px
+		top: 20px
+	.humerus
+		+rotate(-20deg)
+		margin: -5px -5px
+	.radius
+		right: -2px
+	.hand
+		right: 0
+
+		
+.hand
+	position: relative
+	top: 45px
+	width: 10px
+	height: 10px
+	background: $skin-color
+	+border-radius(2em)
+	
+.lower-body
+	position: relative
+	width: 90px
+	margin: 0 auto
+
+
+$jean-color: #070c29
+.waist
+	position: absolute
+	width: 35px
+	height: 16px
+	left: 1.85em
+	background: $jean-color
+
+	
+.leg
+	width: 13px
+	height: 40px
+	position: absolute
+	top: 16px
+	
+	.femur
+		position: absolute
+		height: 20px
+		width: 100%
+		background: $jean-color
+		+transform-origin(50%, 0)
+		
+	.tibia
+		position: absolute
+		height: 20px
+		width: 100%
+		background: $jean-color
+		top: 20px
+		+transform-origin(50%, 0)
+		
+		
+	
+#left-leg
+	left: 29px
+	+transform-origin(0, 0)
+	
+
+#right-leg
+	right: 26px
+	+transform-origin(100%, 0)
+
+.foot
+	width: 20px
+	height: 8px
+	position: absolute
+	top: 38px
+	background: darken($back-gray, 8%)
+	
+#left-foot
+	left: -7px
+	+border-radius(5px 0 0 5px)
+#right-foot
+	right: -7px
+	+border-radius(0 5px 5px 0)
+	
+.about
+	#me
+		left: 3.5%
+	nav
+		top: 0
+	
+#about
+	z-index: 200
+	position: relative
+	width: 960px
+	height: 650px
+	float: left
+	.slider
+		left: 0
+	.info
+		width: 500px
+		float: right
+		margin-right: 20px
+		padding: 80px 0 0
+		opacity: 0
+		
+		em
+			color: lighten(#f56556, 8%)
+		
+	h3
+		font-size: 25px
+		color: #f56556
+		font-weight: 100
+		+museo
+
+	p
+		color: #fff
+		margin: 15px 0
+		line-height: 1.6
+		font-size: 13px
+		+meta-serif 
+	ul
+		position: relative
+	li
+		position: absolute
+		width: 200px
+		height: 200px
+		overflow: hidden
+		z-index: 10
+		opacity: 1
+		+scale(0)
+		+border-radius(10em)
+		+ceaser(easeIn, all, 800ms)	
+	.us
+		top: 105px
+		left: 55px
+		width: 165px
+		height: 165px
+		background: image-url('about/meandkatie.jpg') -30px -10px no-repeat 
+		&:hover
+			background-position: -55px -12px
+		
+	.location
+		top: 370px
+		left: 259px
+		width: 90px
+		height: 90px
+		background: image-url('about/location.png') -20px -80px no-repeat
+		&:hover
+			background-position: -50px -90px
+	
+	.dakota
+		top: 210px
+		left: 250px
+		background: image-url('about/dakota.jpg') -40px -100px no-repeat
+		width: 135px
+		height: 135px
+		&:hover
+			background-position: 0 -30px
+	
+	.csuf
+		top: 290px
+		left: 15px
+		width: 105px
+		height: 105px
+		background: image-url('about/csuf.png') -50px -65px no-repeat
+		&:hover
+			background-position: -75px -20px
+	
+	.baby
+		top: 460px
+		left: 145px
+		width: 160px
+		height: 160px
+		background: image-url('about/baby.jpg') -60px -70px no-repeat
+		&:hover
+			background-position: -10px -20px 
+
+	.standards
+		top: 340px
+		left: 145px
+		width: 80px
+		height: 80px
+		background: image-url('about/standards.jpg') -10px -40px no-repeat
+		&:hover
+			background-position: -60px -170px
+		
+	.tables
+		top: 72px
+		left: 250px
+		width: 102px
+		height: 102px
+		background: image-url('about/tables.jpg') -6px -7px no-repeat
+		&:hover
+			background-position: -8px -25px
+ 
+	.active-dot
+		opacity: 1
+		height: 220px
+		width: 220px
+		top: 185px
+		left: 90px
+		z-index: 20
+		background-position: 50% 0%
+
+
+/* skills */
+.skills
+	.slider
+		left: -960px
+	#me
+		left: 3.5%
+	nav
+		top: 0px
+
+#skills
+	position: relative
+	z-index: 300
+	width: 960px
+	height: 650px
+	float: left
+
+	h3
+		font-size: 70px
+		color: #eee
+		text-transform: uppercase
+		position: absolute
+		left: 250px
+		top: 310px
+		opacity: 0
+		+quatro
+		-webkit-animation: iconFadeIn 2s 1 normal 3s
+		-webkit-animation-fill-mode: both
+
+@-webkit-keyframes iconFadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+
+.skill-marker
+	position: absolute
+	top: 245px
+	left: 225px
+	border-right: 15px solid transparent
+	border-left: 15px solid transparent
+	border-bottom: 15px solid hsla(0,0,0, 0.6)
+	display: none
+	+ceaser(easeOutSine, all, 400ms)
+
+.skill-descriptions
+	position: absolute
+	width: 80%
+	left: 200px
+
+	li
+		display: none
+		position: absolute
+		top: 260px
+		width: 90%
+		padding: 15px
+		background: hsla(0,0,0, 0.6)
+		+border-radius(12px)
+	h4
+		color: #fff
+		font-size: 45px
+		+quatro
+	p
+		color: #bbb
+		font-size: 13px
+		line-height: 1.5
+		margin: 15px 0
+		+museo
+	h5
+		color: #fff
+		font-size: 14px		
+		line-height: 1.8
+		+meta-serif
+
+	.skill-mask
+		overflow: hidden
+	.skill-meter
+		width: 675px
+		height: 25px
+		margin: 20px 0
+		+background-image(linear-gradient(left, #1a1a1a, #b0391d 30%, #b7d238))
+	.training
+		width: 270px
+	.intermediate
+		width: 450px
+	.master
+		width: 675px
+
+
+
+.icons
+	width: 80%
+	height: 100px
+	overflow: hidden
+	position: absolute
+	top: 100px
+	left: 220px 
+
+	li
+		width: 50px
+		height: 50px
+		float: left
+		margin: 0 35px 0 0
+		background: image-url('tools/icons.png') no-repeat
+		position: relative
+		top: -55px
+		text-indent: -9999px
+		&:hover
+			top: 2px
+		&:nth-child(2)
+			background-position: -50px 0
+		&:nth-child(3)
+			background-position: -100px 0
+		&:nth-child(4)
+			background-position: -150px 0
+		&:nth-child(5)
+			background-position: -200px 0
+		&:nth-child(6)
+			background-position: -250px 0
+		&:nth-child(7)
+			background-position: -300px 0
+		&:nth-child(8)
+			background-position: -350px 0 
+	
+
+		
+.contact
+	#me
+		left: 3.5%
+	nav
+		top: 0
+	.slider
+		left: -1920px
+
+#contact
+	position: relative
+	z-index: 300
+	width: 960px
+	height: 650px
+	float: left
+	overflow: hidden
+
+	h3
+		font-size: 38px
+		text-align: center
+		margin: 110px 0 0 0
+		color: hsla(75, 10, 5, 0.7)
+		+quatro
+	p
+		width: 275px
+		margin: 20px auto
+		font-size: 20px
+		line-height: 1.2
+		color: hsla(75, 10, 5, 0.7)
+		+meta-serif
+	
+	.star
+		opacity: 0
+		width: image-width('contact/star.png')
+		height: image-height('contact/star.png')
+		background: image-url('contact/star.png') no-repeat
+		position: absolute
+		top: 562px
+		left: 160px
+		+transform-origin(-50px, -50px)
+		+simple-transform(0.8, 45deg)
+		
+	#paper
+		width: 345px
+		height: 440px
+		position: absolute
+		left: 350px
+		top: 110px
+		background: image-url('contact/paper.jpg') #e1d7b7
+
+	ul
+		display: block
+		width: 200px
+		margin: 0 auto
+
+	li
+		width: 60px
+		height: 55px
+		float: left
+		background: image-url('contact/contact-icons.png') no-repeat
+		margin-left: 25px
+		a
+			display: block
+			width: 60px
+			height: 50px
+			text-indent: -9999px
+		&:first-child
+			background-position: -60px 0
+			
+
+
+
+		
+		
+	
+			
+	
+
+	
+
+	
+	
+	

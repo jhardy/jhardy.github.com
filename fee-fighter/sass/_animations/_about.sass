@@ -1,0 +1,42 @@
+.about
+
+	@for $i from 1 through 7 
+		.dots li:nth-child(#{$i})
+			-webkit-animation: popDots 2s 1 normal ($i - 1)*120ms
+			-webkit-animation-fill-mode: both
+	.us
+		-webkit-animation-fill-mode: both
+	
+	.dakota		 
+		-webkit-animation-fill-mode: both
+		
+	.csuf
+		-webkit-animation-fill-mode: both
+		
+	.info
+		-webkit-animation: infoFade 2s 1 normal 500ms
+		-webkit-animation-fill-mode: both
+	
+@-webkit-keyframes popDots
+	0%
+		+scale(0)
+	20%
+		+scale(0)
+	25%
+		+scale(1.1)
+	30%
+		+scale(1)
+	100%
+		+scale(1)
+		                               
+@-webkit-keyframes infoFade
+	0%
+		opacity: 0
+		-webkit-animation-timing-function: ease-out
+	100%
+		opacity: 1
+
+  
+	
+	
+

@@ -1,0 +1,202 @@
+/* Skill positions */
+.skills
+	.punch
+		#right-arm
+			+transform-origin(0%, 50%)
+			+rotate(-30deg)
+			.humerus
+				+rotate(-50deg)
+			.radius
+				top: -8px
+				right: -8px 	
+				+rotate(-140deg)
+			.hand
+				top: 9px
+				right: -16px
+	#me.kick
+		bottom: -8px
+		+rotate(-30deg)
+		#right-leg
+			top: 5px
+			+rotate(-60deg)
+
+		#left-leg
+			top: 10px
+			+rotate(30deg)
+
+	.closeline
+		#left-arm
+			+transform-origin(0%, 50%)
+			left: 25px
+			top: -5px
+			+rotate(40deg)		
+			.humerus
+				+rotate(45deg)
+			.radius
+				left: -9px
+				+rotate(45deg)	
+			.hand
+				left: -23px
+	.uppercut
+		#right-arm
+			right: 20px
+			+transform-origin(0%, 0%)
+			+rotate(-70deg)
+			.humerus
+				+rotate(-50deg)
+			.radius
+				top: -4px
+				right: -6px
+				+rotate(-90deg)
+			.hand
+				top: 24px
+				left: 24px
+
+	#me.sweepkick
+		bottom: -25px
+		.leg
+			top: -5px
+		#left-leg
+			top: 5px
+			+rotate(60deg)
+
+		#right-foot
+			top: 34px
+
+	.crane
+		#right-leg
+			top: -8px
+		#right-foot
+			top: 33px
+		#right-arm
+			right: 20px
+			+transform-origin(0%, 0%)
+			+rotate(-70deg)
+			.humerus
+				+rotate(-50deg)
+			.radius
+				top: -4px
+				right: -6px
+				+rotate(-90deg)
+			.hand
+				top: 25px
+				left: 23px
+		#left-arm
+			left: 30px
+			top: -5px
+			+transform-origin(0%, 0%)
+			+rotate(70deg)
+			.humerus
+				+rotate(50deg)
+			.radius
+				top: -2px
+				left: -10px
+				+rotate(90deg)
+			.hand
+				top: 28px
+				left: -28px
+
+	#me.flyingkick
+		bottom: 60px
+		+rotate(-5deg)
+		#right-leg
+			top: 4px
+			+rotate(-90deg)
+		#left-leg
+			+rotate(-20deg)
+			.tibia
+				top: 15px
+				+rotate(-50deg)
+			.foot
+				left: 12px
+				top: 29px
+				+rotate(-50deg)
+
+	.bearhug
+		#right-arm
+			right: 20px
+			+rotate(-40deg)
+			.humerus
+				+rotate(-50deg)
+			.radius
+				top: -4px
+				right: -9px
+				+rotate(-45deg)
+			.hand
+				top: 40px
+				left: 21px
+		#left-arm
+			left: 20px
+			top: 0px
+			+rotate(40deg)		
+			.humerus
+				+rotate(45deg)
+			.radius
+				left: -9px
+				+rotate(45deg)	
+			.hand
+				left: -23px
+
+.skills 
+	.head:before
+		content: ""
+		position: absolute
+		top: 25px
+		left: 13px
+		width: 67px
+		height: 10px
+		background: #f43131
+	
+	.headband
+		width: 50px
+		height: 50px
+		position: absolute
+		left: 0px
+		top: 65px
+		z-index: 0
+	
+		ol
+			position: absolute
+		li
+			background: image-url('body/straps.png') no-repeat
+			height: 27px
+			position: absolute
+
+	.top-strap
+		width: 24px
+		left: -1px
+		-webkit-animation: topStrap 3s infinite normal
+
+	.bottom-strap
+		width: 11px
+		left: 16px
+		top: 10px
+		background-position: -27px 0
+		-webkit-animation: bottomStrap 3.5s infinite normal 
+
+@-webkit-keyframes topStrap
+	0%
+		+rotate(40deg)
+		-webkit-animation-timing-function: ease-out
+	30%
+		+rotate(60deg)
+	50%
+		+rotate(20deg)
+	80%
+		+rotate(50deg)
+		-webkit-animation-timing-function: ease-in
+	100%
+		+rotate(40deg)
+@-webkit-keyframes bottomStrap
+	0%
+		+rotate(30deg)
+		-webkit-animation-timing-function: ease-out
+	30%
+		+rotate(60deg)
+	50%
+		+rotate(25deg)
+		-webkit-animation-timing-function: ease-in
+	70%
+		+rotate(50deg)
+	100%
+		+rotate(30deg)		

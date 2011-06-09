@@ -1,0 +1,60 @@
+@import "omg-text"
+@import "ceaser-easing"
+@import "compass/css3"
+
+.no-cssanimations	
+	#me
+		+ceaser()
+	#intro
+		h1		
+			top: 60px
+			opacity: 1
+		p
+			top: 180px
+			opacity: 1
+		h2
+			top: 240px	
+			opacity: 1
+			+omg-text(#ec5e5e, 220, 80, "shaded", 0.05)
+			
+	.about
+		.slider
+			left: 0
+
+	#about
+		display: none
+		.info
+			opacity: 1
+		li
+			opacity: 1
+			+scale(1)
+		
+	.skills		
+		#skills
+			h3
+				opacity: 1
+	#contact
+		.star
+			opacity: 1
+			background-position: 10px 0
+		.star-top-left
+			top: 130px
+			left: 350px
+		.star-top-right
+			top: 130px
+			left: 640px
+				
+		.star-bottom-left
+			top: 500px
+			left: 350px
+			
+		.star-bottom-right
+			top: 500px
+			left: 640px
+
+	
+
+	
+
+	
+	

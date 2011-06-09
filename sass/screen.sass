@@ -115,10 +115,8 @@ nav
 	position: absolute
 	bottom: 0
 	left: 43%
-	z-index: 200
+	z-index: 500
 	display: none
-	
-
 	
 .head
 	width: image-width('body/head.png')
@@ -292,8 +290,6 @@ $jean-color: #070c29
 	width: 960px
 	height: 650px
 	float: left
-	.slider
-		left: 0
 	.info
 		width: 500px
 		float: right
@@ -302,14 +298,12 @@ $jean-color: #070c29
 		opacity: 0
 		
 		em
-			color: lighten(#f56556, 8%)
-		
+			color: lighten(#f56556, 8%)		
 	h3
 		font-size: 25px
 		color: #f56556
 		font-weight: 100
 		+museo
-
 	p
 		color: #fff
 		margin: 15px 0
@@ -327,7 +321,7 @@ $jean-color: #070c29
 		opacity: 1
 		+scale(0)
 		+border-radius(10em)
-		+ceaser(easeIn, all, 800ms)	
+		+ceaser(ease-out, all, 800ms)	
 	.us
 		top: 105px
 		left: 55px
@@ -508,6 +502,7 @@ $jean-color: #070c29
 		position: relative
 		top: -55px
 		text-indent: -9999px
+		cursor: pointer
 		&:hover
 			top: 2px
 		&:nth-child(2)
@@ -524,9 +519,7 @@ $jean-color: #070c29
 			background-position: -300px 0
 		&:nth-child(8)
 			background-position: -350px 0 
-	
-
-		
+			
 .contact
 	#me
 		left: 3.5%
@@ -596,7 +589,7 @@ $jean-color: #070c29
 			background-position: -60px 0
 			
 
-
+@import "_animations/nocssanimation"
 
 		
 		

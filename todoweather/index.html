@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US" data-ng-app="todoWeather">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO Weather Github - Worlds Greatest App</title>
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="//use.typekit.net/ooi6qza.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+  <section id="todo" data-ng-controller="TodoCtrl">
+    <section id="todo-list" class="shadow">
+      <header>
+          <h1 class="todo-logo">TODO</h1>
+      </header>
+
+      <article id="list">
+        <div id="todo-items">
+          <form action="" id="new-todo" data-ng-submit="addTodo()">
+            <input type="text" data-ng-model="newTodo" autofocus placeholder="Something I need to get done..." />
+          </form>
+
+          <ol>
+            <li data-ng-repeat="todo in todoItems | filter:statusFilter" data-ng-class="{completed: todo.completed, editing: todo == editedTodo}">
+
+              <p class="done-toggle"><input class="toggle" type="checkbox" data-ng-model="todo.completed"></p>
+              <label data-ng-dblclick="editTodo(todo)" ng-bind-html-unsafe="todo.title"></label>
+              <button class="destroy" data-ng-click="removeTodo(todo)"></button>
+
+              <form data-ng-submit="doneEditing(todo)" class="edit-form">
+                <input class="edit" data-ng-model="todo.title" autofocus todo-blur="doneEditing(todo)" todo-focus="todo == editedTodo">
+              </form>
+            </li>
+          </ol>
+        </div>
+      </article>
+    </section>
+  </section>
+
+  <section id="widgets">
+
+    <section id="weather" class="shadow" data-ng-controller="WeatherCtrl" data-show-settings="{{showSettings}}" data-ng-class="{manual: manual, loaded: weather.loaded}">
+
+      <section class="locator">
+        <div class="radar">
+          <div class="dot"></div>
+          <div class="sensor"></div>
+        </div>
+      </section>
+
+      <section class="user-settings">
+
+        <form data-ng-submit="findWeather()">
+          <label>What's your location?</label>
+          <input weather-blur="findWeather()" data-ng-model="manualLocation" type='text' placeholder="San Francisco, CA" required />
+
+          <div class="unit-selection clearfix">
+            <div class="field-group left">
+              <input type="radio" ng-model="tempUnit" value="f" />
+              <label>F&deg;</label>
+            </div>
+
+            <div class="field-group right">
+              <input type="radio" ng-model="tempUnit" value="c" />
+              <label>C&deg;</label>
+            </div>
+          </div>
+
+          <button>Get Weather</button>
+        </form>
+      </section>
+
+      <section class="forecast clearfix {{timeOfDay}} condition-{{weather.currentConditions.code}} {{weather.currentConditions.text}}" data-ng-init="geolocate()">
+        <i class="settings" data-ng-click="toggleSettings()"></i>
+        <div class="icon"></div>
+        <div class="current-temp">
+          <div class="temp">{{weather.currentConditions.temp}}&deg;</div>
+          <p class="details">&amp; {{weather.currentConditions.text}} in {{weather.currentConditions.location}}</p>
+        </div>
+        <div class="temp-color"></div>
+      </section>
+    </section>
+
+    <section id="github" data-ng-controller="GithubCtrl" class="shadow {{loadStatus}}" data-ng-class="{editAccount: editingAccount}">
+      <div class="connect-account">
+        <p>{{introText}}</p>
+          <form data-ng-submit="getRepos()">
+            <input weather-blur="getRepos()" data-ng-model="githubUserName" placeholder="Your Github User Name" />
+          </form>
+      </div>
+
+      <div class="loader"></div>
+
+      <div class="repo-list">
+        <header>
+          <hgroup class="clearfix">
+            <h3>github <span>issues</span></h3>
+            <div class="user-name" data-ng-click="editAccount()"><i class="github-icon"></i>{{githubUserName}}</div>
+          </hgroup>
+
+          <form class="filter-repo">
+            <i class="search-icon"></i>
+            <input placeholder="Filter Repos" ng-model="searchIssues.name" />
+          </form>
+        </header>
+
+         <ol class="all-repos">
+          <li class="issue" data-ng-repeat="repo in repoList | filter:hasIssues | filter:searchIssues" data-ng-click="getIssues(repo, $event)">
+            <span class="issue-count">{{repo.open_issues}}</span>
+            <span class="repo-name">{{repo.name}}</span>
+            <div class="repo-issues">
+              <ol>
+                <li data-ng-repeat="issue in repo.issue_list">
+                    <strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong>
+                    <button data-ng-click="addIssueTodo(repo, issue)">+ todo</button>
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="js/libs/angular-1.0.1.min.js"></script>
+  <script src="js/libs/angular-resource-1.0.1.min.js"></script>
+  <script src="js/libs/angular-sanitize-1.0.1.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services/addTodoFromIssue.js"></script>
+  <script src="js/controllers/todoCtlr.js"></script>
+  <script src="js/todoStorage.js"></script>
+  <script src="js/controllers/weatherCtlr.js"></script>
+  <script src="js/weatherStorage.js"></script>
+  <script src="js/controllers/githubCtlr.js"></script>
+  <script src="js/githubStorage.js"></script>
+
+</body>
+</html>

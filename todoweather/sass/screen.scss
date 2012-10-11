@@ -545,8 +545,12 @@ body {
 }
 
 @mixin climate-top-position($pos) {
-  .icon {
-    background-position-y: (128px * -($pos - 1)) !important;
+  &.day .icon {
+    background-position: 0 (128px * -($pos - 1)) !important;
+  }
+
+  &.night .icon {
+    background-position: -257px (128px * -($pos - 1)) !important;
   }
 }
 

@@ -913,92 +913,159 @@ body {
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-0 .icon {
-  background-position-y: 0px !important;
+.condition-0.day .icon {
+  background-position: 0 0px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-0.night .icon {
+  background-position: -257px 0px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-1 .icon, .condition-2 .icon, .condition-45 .icon {
-  background-position-y: -128px !important;
+.condition-1.day .icon, .condition-2.day .icon, .condition-45.day .icon {
+  background-position: 0 -128px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-1.night .icon, .condition-2.night .icon, .condition-45.night .icon {
+  background-position: -257px -128px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-3 .icon, .condition-4 .icon {
-  background-position-y: -256px !important;
+.condition-3.day .icon, .condition-4.day .icon {
+  background-position: 0 -256px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-3.night .icon, .condition-4.night .icon {
+  background-position: -257px -256px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-9 .icon {
-  background-position-y: -384px !important;
+.condition-9.day .icon {
+  background-position: 0 -384px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-9.night .icon {
+  background-position: -257px -384px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-11 .icon, .condition-12 .icon, .condition-40 .icon {
-  background-position-y: -512px !important;
+.condition-11.day .icon, .condition-12.day .icon, .condition-40.day .icon {
+  background-position: 0 -512px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-11.night .icon, .condition-12.night .icon, .condition-40.night .icon {
+  background-position: -257px -512px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-37 .icon, .condition-38 .icon, .condition-39 .icon, .condition-47 .icon {
-  background-position-y: -640px !important;
+.condition-37.day .icon, .condition-38.day .icon, .condition-39.day .icon, .condition-47.day .icon {
+  background-position: 0 -640px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-37.night .icon, .condition-38.night .icon, .condition-39.night .icon, .condition-47.night .icon {
+  background-position: -257px -640px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-5 .icon, .condition-42 .icon, .condition-46 .icon {
-  background-position-y: -768px !important;
+.condition-5.day .icon, .condition-42.day .icon, .condition-46.day .icon {
+  background-position: 0 -768px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-5.night .icon, .condition-42.night .icon, .condition-46.night .icon {
+  background-position: -257px -768px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-6 .icon, .condition-7 .icon, .condition-8 .icon, .condition-10 .icon, .condition-17 .icon, .condition-18 .icon, .condition-35 .icon {
-  background-position-y: -896px !important;
+.condition-6.day .icon, .condition-7.day .icon, .condition-8.day .icon, .condition-10.day .icon, .condition-17.day .icon, .condition-18.day .icon, .condition-35.day .icon {
+  background-position: 0 -896px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-6.night .icon, .condition-7.night .icon, .condition-8.night .icon, .condition-10.night .icon, .condition-17.night .icon, .condition-18.night .icon, .condition-35.night .icon {
+  background-position: -257px -896px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-13 .icon, .condition-15 .icon, .condition-16 .icon, .condition-41 .icon, .condition-43 .icon {
-  background-position-y: -1024px !important;
+.condition-13.day .icon, .condition-15.day .icon, .condition-16.day .icon, .condition-41.day .icon, .condition-43.day .icon {
+  background-position: 0 -1024px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-13.night .icon, .condition-15.night .icon, .condition-16.night .icon, .condition-41.night .icon, .condition-43.night .icon {
+  background-position: -257px -1024px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-14 .icon {
-  background-position-y: -1152px !important;
+.condition-14.day .icon {
+  background-position: 0 -1152px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-14.night .icon {
+  background-position: -257px -1152px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-25 .icon {
-  background-position-y: -1280px !important;
+.condition-25.day .icon {
+  background-position: 0 -1280px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-25.night .icon {
+  background-position: -257px -1280px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-19 .icon, .condition-20 .icon, .condition-21 .icon, .condition-22 .icon {
-  background-position-y: -1408px !important;
+.condition-19.day .icon, .condition-20.day .icon, .condition-21.day .icon, .condition-22.day .icon {
+  background-position: 0 -1408px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-19.night .icon, .condition-20.night .icon, .condition-21.night .icon, .condition-22.night .icon {
+  background-position: -257px -1408px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-26 .icon {
-
-  background-position-y: -1536px !important;
+.condition-26.day .icon {
+  background-position: 0 -1536px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-26.night .icon {
+  background-position: -257px -1536px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-23 .icon, .condition-24 .icon {
-  background-position-y: -1664px !important;
+.condition-23.day .icon, .condition-24.day .icon {
+  background-position: 0 -1664px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-23.night .icon, .condition-24.night .icon {
+  background-position: -257px -1664px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-31 .icon, .condition-33 .icon {
-  background-position-y: -1792px !important;
+.condition-31.day .icon, .condition-33.day .icon {
+  background-position: 0 -1792px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-31.night .icon, .condition-33.night .icon {
+  background-position: -257px -1792px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-32 .icon, .condition-34 .icon, .condition-36 .icon {
-  background-position-y: -1920px !important;
+.condition-32.day .icon, .condition-34.day .icon, .condition-36.day .icon {
+  background-position: 0 -1920px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-32.night .icon, .condition-34.night .icon, .condition-36.night .icon {
+  background-position: -257px -1920px !important;
 }
 
 /* line 548, ../sass/screen.scss */
-.condition-27 .icon, .condition-28 .icon, .condition-29 .icon, .condition-30 .icon, .condition-44 .icon {
-  background-position-y: -1536px !important;
+.condition-27.day .icon, .condition-28.day .icon, .condition-29.day .icon, .condition-30.day .icon, .condition-44.day .icon {
+  background-position: 0 -1536px !important;
+}
+/* line 552, ../sass/screen.scss */
+.condition-27.night .icon, .condition-28.night .icon, .condition-29.night .icon, .condition-30.night .icon, .condition-44.night .icon {
+  background-position: -257px -1536px !important;
 }
 
-/* line 620, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 #github {
   width: 475px;
   height: 180px;
@@ -1013,7 +1080,7 @@ body {
   background: url('../images/octocat.png?1349970473') no-repeat 100% -16px, -ms-linear-gradient(rgba(255, 255, 255, 0.85), rgba(227, 227, 227, 0.85));
   background: url('../images/octocat.png?1349970473') no-repeat 100% -16px, linear-gradient(rgba(255, 255, 255, 0.85), rgba(227, 227, 227, 0.85));
 }
-/* line 630, ../sass/screen.scss */
+/* line 634, ../sass/screen.scss */
 #github .connect-account {
   width: 215px;
   margin: 10px 0 20px 0;
@@ -1028,14 +1095,14 @@ body {
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-/* line 640, ../sass/screen.scss */
+/* line 644, ../sass/screen.scss */
 #github .connect-account input {
   margin: 15px 0;
   padding: 8px 15px;
   width: 165px;
   text-align: center;
 }
-/* line 648, ../sass/screen.scss */
+/* line 652, ../sass/screen.scss */
 #github .loader {
   position: absolute;
   top: 0;
@@ -1051,12 +1118,12 @@ body {
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-/* line 661, ../sass/screen.scss */
+/* line 665, ../sass/screen.scss */
 #github input {
   border: solid 1px #ccc;
   outline: 0;
 }
-/* line 671, ../sass/screen.scss */
+/* line 675, ../sass/screen.scss */
 #github header {
   width: 100%;
   padding: 8px 15px;
@@ -1064,26 +1131,26 @@ body {
   font-size: 14px;
   text-shadow: 0 1px 0 white;
 }
-/* line 678, ../sass/screen.scss */
+/* line 682, ../sass/screen.scss */
 #github header hgroup {
   margin-top: 8px;
 }
-/* line 682, ../sass/screen.scss */
+/* line 686, ../sass/screen.scss */
 #github header h3 {
   float: left;
   font-weight: bold;
 }
-/* line 686, ../sass/screen.scss */
+/* line 690, ../sass/screen.scss */
 #github header h3 span {
   color: #a1a0a0;
 }
-/* line 691, ../sass/screen.scss */
+/* line 695, ../sass/screen.scss */
 #github header .user-name {
   float: right;
   margin-top: -8px;
   cursor: pointer;
 }
-/* line 696, ../sass/screen.scss */
+/* line 700, ../sass/screen.scss */
 #github header .user-name .github-icon {
   display: inline-block;
   width: 22px;
@@ -1092,7 +1159,7 @@ body {
   background: url('../images/github-icon.png?1349970473') -1px 0 no-repeat;
   vertical-align: text-bottom;
 }
-/* line 706, ../sass/screen.scss */
+/* line 710, ../sass/screen.scss */
 #github header form {
   margin-top: 10px;
   padding: 10px 0 3px;
@@ -1101,7 +1168,7 @@ body {
   -moz-box-shadow: inset 0 1px 0 white;
   box-shadow: inset 0 1px 0 white;
 }
-/* line 712, ../sass/screen.scss */
+/* line 716, ../sass/screen.scss */
 #github header form input {
   width: 100%;
   padding: 7px 10px;
@@ -1111,7 +1178,7 @@ body {
   -o-border-radius: 2em;
   border-radius: 2em;
 }
-/* line 720, ../sass/screen.scss */
+/* line 724, ../sass/screen.scss */
 #github .repo-list {
   position: relative;
   left: 900px;
@@ -1121,12 +1188,12 @@ body {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-/* line 726, ../sass/screen.scss */
+/* line 730, ../sass/screen.scss */
 #github .all-repos {
   background: #e3e3e4;
   padding-top: 15px;
 }
-/* line 731, ../sass/screen.scss */
+/* line 735, ../sass/screen.scss */
 #github .issue {
   width: 95%;
   margin: 0 auto 10px;
@@ -1147,16 +1214,16 @@ body {
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 }
-/* line 741, ../sass/screen.scss */
+/* line 745, ../sass/screen.scss */
 #github .issue.expanded .repo-issues {
   display: block;
 }
-/* line 746, ../sass/screen.scss */
+/* line 750, ../sass/screen.scss */
 #github .issue:hover {
   cursor: pointer;
   background: #fff;
 }
-/* line 752, ../sass/screen.scss */
+/* line 756, ../sass/screen.scss */
 #github .issue-count {
   display: inline-block;
   padding: 0.3em 1em;
@@ -1176,11 +1243,11 @@ body {
   -o-border-radius: 2em;
   border-radius: 2em;
 }
-/* line 767, ../sass/screen.scss */
+/* line 771, ../sass/screen.scss */
 #github .repo-issues {
   display: none;
 }
-/* line 770, ../sass/screen.scss */
+/* line 774, ../sass/screen.scss */
 #github .repo-issues ol {
   margin-top: 20px;
   list-style: inside disc;
@@ -1189,18 +1256,18 @@ body {
   color: #534f4c;
   line-height: 1.5;
 }
-/* line 779, ../sass/screen.scss */
+/* line 783, ../sass/screen.scss */
 #github .repo-issues li {
   padding-top: 10px;
   margin: 0 0 12px 5px;
 }
-/* line 784, ../sass/screen.scss */
+/* line 788, ../sass/screen.scss */
 #github .repo-issues strong {
   display: inline-block;
   vertical-align: text-top;
   width: 75%;
 }
-/* line 790, ../sass/screen.scss */
+/* line 794, ../sass/screen.scss */
 #github .repo-issues strong a {
   color: #534F4C;
   text-decoration: none;
@@ -1210,17 +1277,17 @@ body {
   -o-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
-/* line 795, ../sass/screen.scss */
+/* line 799, ../sass/screen.scss */
 #github .repo-issues strong a:hover {
   color: #3387b3;
 }
-/* line 801, ../sass/screen.scss */
+/* line 805, ../sass/screen.scss */
 #github .repo-issues time {
   color: #948f8a;
   font-size: 11px;
   margin-left: 20px;
 }
-/* line 807, ../sass/screen.scss */
+/* line 811, ../sass/screen.scss */
 #github .repo-issues button {
   display: inline-block;
   float: right;
@@ -1239,7 +1306,7 @@ body {
   border: 0;
   color: gray;
 }
-/* line 813, ../sass/screen.scss */
+/* line 817, ../sass/screen.scss */
 #github .repo-issues button:hover {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3387B3', endColorstr='#FF1C4B64');
@@ -1247,7 +1314,7 @@ body {
   border: 0;
   color: white;
 }
-/* line 821, ../sass/screen.scss */
+/* line 825, ../sass/screen.scss */
 #github.loading .loader {
   opacity: 1;
   -webkit-transition-delay: 0.3s;
@@ -1256,11 +1323,11 @@ body {
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
-/* line 825, ../sass/screen.scss */
+/* line 829, ../sass/screen.scss */
 #github.loading .connect-account {
   opacity: 0;
 }
-/* line 830, ../sass/screen.scss */
+/* line 834, ../sass/screen.scss */
 #github.loaded {
   height: auto;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.85)), color-stop(100%, rgba(227, 227, 227, 0.85)));
@@ -1270,23 +1337,23 @@ body {
   background: -ms-linear-gradient(rgba(255, 255, 255, 0.85), rgba(227, 227, 227, 0.85));
   background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(227, 227, 227, 0.85));
 }
-/* line 833, ../sass/screen.scss */
+/* line 837, ../sass/screen.scss */
 #github.loaded .loader, #github.loaded .connect-account {
   display: none;
 }
-/* line 837, ../sass/screen.scss */
+/* line 841, ../sass/screen.scss */
 #github.loaded .repo-list {
   left: 0;
 }
-/* line 842, ../sass/screen.scss */
+/* line 846, ../sass/screen.scss */
 #github .edit-github-account {
   display: none;
 }
-/* line 847, ../sass/screen.scss */
+/* line 851, ../sass/screen.scss */
 #github.editAccount .edit-github-account {
   display: block;
 }
-/* line 851, ../sass/screen.scss */
+/* line 855, ../sass/screen.scss */
 #github.editAccount .filter-repo {
   display: none;
 }

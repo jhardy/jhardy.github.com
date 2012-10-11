@@ -104,11 +104,11 @@ todoWeather.controller('WeatherCtrl', function($scope, $location, $http, weather
     }
 
     if(temp >= 100) {
-      $tempBar.css('background-position-y', '100%')
+      $tempBar.css('background-position', ' 0 100%')
     } else if (temp <= 0) {
-      $tempBar.css('background-position-y', '0%')
+      $tempBar.css('background-position', '0 0%')
     } else {
-      $tempBar.css('background-position-y', temp + "%")
+      $tempBar.css('background-position', '0 ' + temp + "%")
     }
   };
 

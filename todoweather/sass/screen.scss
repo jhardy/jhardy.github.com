@@ -283,19 +283,19 @@ body {
 
   &[data-show-settings="true"]{
     .user-settings {
-      top: 0;
+      @include transform(translateY(-190px));
     }
 
     .forecast {
-      top: 157px;
-      @include transition(all 0.5s linear 0)
+      @include transform(translateY(157px));
+      @include transition(all 0.5s linear 0);
     }
   }
 
 
   &[data-show-settings="false"]{
     .user-settings {
-      top: -170px;
+      @include transform(translateY(-370px));
     }
 
     .forecast {
@@ -306,11 +306,11 @@ body {
 
   .user-settings {
     position: absolute;
-    top: -170px;
     left: 50%;
     width: 295px;
     margin-top: 30px;
     margin-left: -147px;
+    @include transform(translateY(-400px));
     @include transition(all 0.5s linear);
 
     label {
@@ -376,8 +376,9 @@ body {
       }
     }
 
+
    .left {
-      label { @include border-radius(5px 0 0 5px);  border-right: solid 1px #fff;}
+      label { @include border-radius(5px 0 0 5px);  border-right: solid 1px #fff; }
       input:checked  + label {
         border-right: solid 1px #ccc;
       }

@@ -1,0 +1,176 @@
+.overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: rgba(#232323, 0.8);
+	opacity: 0;
+	z-index: 10;
+}
+
+.modal {
+	height: 420px;
+	width: 900px;
+	padding: 30px;
+	margin-left: -450px;
+	margin-top: -210px;
+	position: fixed;
+	top: -120%;
+	left: 50%;
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	opacity: 0;
+	font-weight: normal;
+	z-index: 20;
+
+	@include transition(all 0.3s 0.2s ceaser($ease-in-out));
+
+	h3, h5 {
+		margin: 20px 0;
+		text-align: center;
+		font-weight: normal;
+		font-size: pxtoem(25);
+		color: #3c5b7f;
+	}
+
+	h5 {
+		margin: 10px 0;
+		font-size: pxtoem(16);
+		text-align: left;
+	}
+
+	a {
+		color: #0eb9ed;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.left{ 
+		margin-right: 50px;
+	}
+
+	.left, .right {
+		float: left;
+		width: 380px;
+	}
+
+	pre {
+		margin: 10px 0 30px;
+		padding: 15px;
+		background: #eaeaea;
+		border-radius: 4px;
+		font-size: 12px;
+	}
+
+	.instructions {
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		left: 1200px;
+		top: 0;
+		background: #fff;
+		z-index: 0;
+
+		&.current {
+			left: 30px;
+			z-index: 100;
+
+		}
+	}
+
+	.instruction-select {
+		width: 850px;
+		margin: 0 auto;
+		padding: 20px 0;
+		position: absolute;
+		bottom: 0px;
+		left: 25px;
+		border-top: solid 1px lighten(#ccc, 10%);
+		text-align: center;
+	}
+
+	p {
+		margin: 20px 0;
+		font-size: 15px;
+	}
+
+	button {
+		font-size: 14px;
+		display: inline-block;
+		margin-right: 10px;
+		padding: .5em 1.5em;
+		border-radius: 4px;
+		background: none;
+		border: 0;
+		cursor: pointer;
+
+		&:hover {
+			background: lighten(#9083a5, 35%);
+		}
+
+		&.active {
+			background: #9083a5;
+			color: #fff;
+		}
+
+	}
+
+	.compass {
+		.right {
+			pre {
+				height: 178px;
+			}
+		}
+	}
+
+
+
+	.close {
+		display: block;
+		height: 30px;
+		width: 30px;
+		padding: 0;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+		color: #ccc;
+		line-height: 1;
+		z-index: 200;
+
+		&:hover {
+			background: none;
+			color: darken(#ccc, 15%);
+		}
+
+	}
+}
+
+.show {
+	display: block;
+	opacity: 1;
+	top: 50%;
+}
+
+.fade-in {
+	display: block;
+	@include animation(fade-in 0.45s both);
+}
+
+
+@include keyframes(fade-in) {
+	0% {
+		opacity: 0;
+	}
+
+	100%{ 
+		opacity: 1;
+	}
+}

@@ -1,0 +1,122 @@
+.md-iphone-5 {
+	margin: 0 auto;
+	font-size: 1.6px;
+
+	.md-body, .md-screen, .md-home-button, .md-top-speaker {
+		background: none;
+		border: solid 1px #fff;
+	}
+
+	.md-front-camera, .md-top-speaker {
+		border: none;
+		background: #fff;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.md-top-speaker {
+		height: 1px;
+		padding: 0;
+	}
+
+
+	.md-screen {
+		box-shadow: none;
+		width: 85%;
+	}
+
+	.md-home-button {
+		width: 2.7em;
+		height: 2.7em;
+		padding: 0;
+	}
+}
+
+	.md-ipad {
+
+		font-size: 1px;
+
+		.md-body, .md-screen, .md-home-button {
+			background: none;
+			border: solid 1px #fff;
+		}
+
+		.md-front-camera {
+			background: #fff;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.md-screen {
+			box-shadow: none;
+			width: 80%;
+			height: 62em;
+		}
+
+		.md-home-button {
+			width: 3.2em;
+			height: 3.5em;
+			padding: 0;
+		}
+	}
+
+	.md-macbook-pro {
+		margin: 0 auto;
+		font-size: 2.2px;
+		position: relative;
+		top: -5px;
+
+		.md-lid, .md-screen, .md-base {
+			background: none;
+			border: solid 1px #fff;
+		}
+
+		.md-screen {
+			width: 90%;
+		}
+
+		.md-camera {
+			background: #fff;
+		}
+		
+		.md-base:before {
+			display: none;
+		}
+		.md-base:after {
+			display: none;
+		}
+	}
+
+	.md-imac {
+		font-size: 1.6px;
+		.md-body, .md-screen, .md-top, .md-stand, .md-foot {
+			background: none;
+			border: solid 1px #fff;
+		}
+
+		.md-camera {
+			background: #fff;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.md-top {
+			border: none;
+		}
+
+		.md-stand {
+			border-top: none;
+			@include transform3d(none);
+		}
+
+		.md-foot {
+			display: none;
+			box-shadow: none;
+		}
+	}

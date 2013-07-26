@@ -1,0 +1,20 @@
+{
+  "name": "sass-pack",
+  "main": [
+    "./packs/_normalize.scss",
+    "./packs/_helpers.scss",
+    "./packs/_utility.scss"
+  ],
+  "version": "0.0.0",
+  "dependencies": {},
+  "gitHead": "17815720844a8210a6040903cd23de603fffbf45",
+  "readme": "sass-pack\n=========\n\nSass Pack",
+  "readmeFilename": "README.md",
+  "_id": "sass-pack@0.5.1",
+  "description": "sass-pack =========",
+  "commit": "17815720844a8210a6040903cd23de603fffbf45",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jhardy/sass-pack.git"
+  }
+}
